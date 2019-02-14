@@ -36,11 +36,13 @@ end
 
 
 def count_elements(array)
-array.uniq.each {|i| count = 0
+array.uniq.each {|i| count = 0 #unique fetches unique elments.
         array.each {|i2| if i2 == i then count += 1 end}
         i[:count] = count}
 end
+
 count_elements([{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}])
+
 #([{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}]).to eq([{:name => "blake", :count => 2}, {:name => "ashley", :count => 1}]
 
 def merge_data
