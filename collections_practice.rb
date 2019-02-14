@@ -45,8 +45,8 @@ count_elements([{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}])
 
 #([{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}]).to eq([{:name => "blake", :count => 2}, {:name => "ashley", :count => 1}]
 
-def merge_data(keys,data)
-
+def merge_data(v1,v2)
+v1[0].values.map.with_index {|v, i| v2[i].merge(v)}
 end
 
 def find_cool(hashes)
